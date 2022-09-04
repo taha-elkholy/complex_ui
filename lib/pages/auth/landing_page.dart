@@ -45,16 +45,12 @@ class _Body extends StatelessWidget {
             child: FittedBox(
               fit: BoxFit.scaleDown,
               child: Row(
-                children: const [
+                children: [
                   RotatedBox(
                     quarterTurns: 3,
                     child: Text(
                       'eShop',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 36,
-                        fontWeight: FontWeight.normal,
-                      ),
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),
                   SizedBox(
@@ -67,10 +63,7 @@ class _Body extends StatelessWidget {
                   ),
                   Text(
                     'La nueva\nforma de \ncomprar',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 36,
-                        fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ],
               ),
@@ -105,10 +98,10 @@ class _Body extends StatelessWidget {
                       color: AppColors.lightGrey,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: const Center(
+                    child: Center(
                         child: Text(
                       'Registrar',
-                      style: TextStyle(fontWeight: FontWeight.w600),
+                      style: Theme.of(context).textTheme.bodyMedium,
                     )),
                   ),
                 ),
@@ -125,11 +118,12 @@ class _Body extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                         border:
                             Border.all(color: Colors.black.withOpacity(.3))),
-                    child: const Center(
-                        child: Text(
-                      'Ingresar',
-                      style: TextStyle(fontWeight: FontWeight.w600),
-                    )),
+                    child: Center(
+                      child: Text(
+                        'Ingresar',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ),
                   ),
                 ),
               ),

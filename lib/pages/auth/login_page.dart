@@ -1,12 +1,9 @@
-import 'dart:ui';
-
 import 'package:complex_ui/core/router/routes.dart';
 import 'package:complex_ui/core/style/colors.dart';
 import 'package:complex_ui/core/widgets/app_text_form_field.dart';
 import 'package:complex_ui/pages/widgets/background.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -16,16 +13,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: SvgPicture.asset(
-            'assets/icons/akar-icons_arrow-left.svg',
-            width: 25,
-            height: 25,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
-      ),
+      appBar: AppBar(),
       body: Stack(
         children: const [
           Background(color1: AppColors.green, color2: AppColors.yellow),
@@ -49,15 +37,11 @@ class _Body extends StatelessWidget {
           SizedBox(
             height: size.height * .1,
           ),
-          const Align(
+          Align(
             alignment: AlignmentDirectional.centerStart,
             child: Text(
               '¡Hola de nuevo!\nTe esperábamos',
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: AppColors.warmBlack,
-              ),
+              style: Theme.of(context).textTheme.titleSmall,
             ),
           ),
           Stack(
@@ -99,11 +83,14 @@ class _Body extends StatelessWidget {
           SizedBox(
             height: size.height * 0.005,
           ),
-          const Align(
+          Align(
             alignment: AlignmentDirectional.centerEnd,
             child: Text(
               'Recuperar contraseña',
-              style: TextStyle(fontSize: 15, color: AppColors.orange),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(color: AppColors.orange),
             ),
           ),
           SizedBox(
@@ -114,30 +101,32 @@ class _Body extends StatelessWidget {
             height: size.height * 0.08,
             child: ElevatedButton(
               onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                  primary: AppColors.orange.withOpacity(.9)),
               child: const Text(
                 'Ingresar',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: AppColors.white,
-                    fontWeight: FontWeight.bold),
               ),
             ),
           ),
           const Spacer(),
           RichText(
               text: TextSpan(children: [
-            const TextSpan(
+            TextSpan(
               text: 'Aún no tienes cuenta? ',
-              style: TextStyle(fontSize: 15, color: AppColors.warmBlack),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(color: AppColors.warmBlack),
             ),
             TextSpan(
               text: 'Registrate ahora',
-              style: const TextStyle(fontSize: 15, color: AppColors.orange),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium!
+                  .copyWith(color: AppColors.orange),
               recognizer: TapGestureRecognizer()
                 ..onTap = () => Navigator.popAndPushNamed(
-                    context, AppRoutes.registerPageRoute),
+                      context,
+                      AppRoutes.registerPageRoute,
+                    ),
             ),
           ]))
         ],
