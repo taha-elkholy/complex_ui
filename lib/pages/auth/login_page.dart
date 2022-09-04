@@ -1,7 +1,7 @@
 import 'package:complex_ui/core/router/routes.dart';
 import 'package:complex_ui/core/style/colors.dart';
 import 'package:complex_ui/core/widgets/app_text_form_field.dart';
-import 'package:complex_ui/pages/widgets/background.dart';
+import 'package:complex_ui/core/widgets/background.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -125,7 +125,7 @@ class _Body extends StatelessWidget {
               recognizer: TapGestureRecognizer()
                 ..onTap = () => Navigator.popAndPushNamed(
                       context,
-                      AppRoutes.registerPageRoute,
+                      AppRoutes.registerWithPageRoute,
                     ),
             ),
           ]))

@@ -1,6 +1,6 @@
 import 'package:complex_ui/core/style/colors.dart';
 import 'package:complex_ui/core/widgets/app_text_form_field.dart';
-import 'package:complex_ui/pages/widgets/background.dart';
+import 'package:complex_ui/core/widgets/background.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -35,7 +35,7 @@ class _Body extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: size.height * 0.1,
+            height: size.height * 0.09,
           ),
           SizedBox(
             height: size.height * 0.35,
@@ -75,7 +75,7 @@ class _Body extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: size.height * 0.1,
+                    height: size.height * 0.09,
                     width: size.width * 0.8,
                     child: AppTextFormField(
                       hint: 'Ingrese su nomrbre',
@@ -84,10 +84,7 @@ class _Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.0001,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.1,
+                    height: size.height * 0.09,
                     width: size.width * 0.8,
                     child: AppTextFormField(
                       hint: 'Ingrese su correo electrónico',
@@ -96,10 +93,7 @@ class _Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.0001,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.1,
+                    height: size.height * 0.09,
                     width: size.width * 0.8,
                     child: AppTextFormField(
                       hint: 'Contraseña',
@@ -109,10 +103,7 @@ class _Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.0001,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.1,
+                    height: size.height * 0.09,
                     width: size.width * 0.8,
                     child: AppTextFormField(
                       hint: 'Confirmar Contraseña',
@@ -122,10 +113,7 @@ class _Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * 0.0001,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.08,
+                    height: 60,
                     width: size.width * 0.8,
                     child: ElevatedButton(
                       onPressed: () {},

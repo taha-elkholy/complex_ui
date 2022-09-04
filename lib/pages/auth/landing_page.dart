@@ -1,6 +1,6 @@
 import 'package:complex_ui/core/router/routes.dart';
 import 'package:complex_ui/core/style/colors.dart';
-import 'package:complex_ui/pages/widgets/background.dart';
+import 'package:complex_ui/core/widgets/background.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
@@ -88,8 +88,8 @@ class _Body extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
-                onTap: () =>
-                    Navigator.pushNamed(context, AppRoutes.registerPageRoute),
+                onTap: () => Navigator.pushNamed(
+                    context, AppRoutes.registerWithPageRoute),
                 child: SizedBox(
                   width: 150,
                   height: 60,
