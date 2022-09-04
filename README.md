@@ -1,9 +1,10 @@
 # complex_ui
 
-A Flutter project only for UI purposes.
+This Flutter project is only for UI purposes.
 
-* Under Development 
-* Use Figma designed and work on it
+* Under Development
+* Using Figma designed and working on it
+* Figma Link => https://www.figma.com/file/luY8L1w7EJRV1D74A2d8q3/Restructured-Ecommerce-App---eShop-(Community)?node-id=0%3A1
 
 # Screenshots
 <img src="https://user-images.githubusercontent.com/95647394/187071433-752953ec-9a6d-4b7c-9665-171fff634937.png" width="300">
