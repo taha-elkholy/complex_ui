@@ -10,23 +10,7 @@ class ProductItem extends StatefulWidget {
   State<ProductItem> createState() => _ProductItemState();
 }
 
-class _ProductItemState extends State<ProductItem>
-    with TickerProviderStateMixin {
-  late final AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _ProductItemState extends State<ProductItem> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -93,7 +77,9 @@ class _ProductItemState extends State<ProductItem>
                           radius: 20,
                           backgroundColor: AppColors.warmBlack,
                           child: SvgPicture.asset(
-                            'assets/icons/akar-icons_heart.svg',
+                            widget.product.isFav
+                                ? 'assets/icons/favorito.svg'
+                                : 'assets/icons/akar-icons_heart.svg',
                             width: 25,
                             height: 25,
                             color: AppColors.white,
@@ -135,43 +121,67 @@ class Product {
   final String name;
   final double price;
   final String image;
+  final String userImage;
+  final String description;
+  final bool isFav;
 
   const Product({
     required this.name,
     required this.price,
     required this.image,
+    required this.userImage,
+    required this.description,
+    required this.isFav,
   });
 }
 
 List<Product> homePageProducts = const [
   Product(
-    name: 'Poncho de Lana',
-    price: 32.23,
-    image: 'assets/images/pacari.png',
-  ),
+      name: 'Poncho de Lana',
+      price: 32.23,
+      image: 'assets/images/pacari.png',
+      userImage: 'assets/images/persson1.png',
+      description:
+          'Una biografía, de Mercedes Altamir. Este libro de 160 páginas narran la vida y obra de la artista Ecuatoriana...',
+      isFav: true),
   Product(
-    name: 'Bola Cristal Mitad del Mundo',
-    price: 15.62,
-    image: 'assets/images/iglo.png',
-  ),
+      name: 'Bola Cristal Mitad del Mundo',
+      price: 15.62,
+      image: 'assets/images/iglo.png',
+      userImage: 'assets/images/persson2.png',
+      description:
+          'Una biografía, de Mercedes Altamir. Este libro de 160 páginas narran la vida y obra de la artista Ecuatoriana...',
+      isFav: false),
   Product(
-    name: 'Chola Cuencana',
-    price: 5.40,
-    image: 'assets/images/muñeca.png',
-  ),
+      name: 'Chola Cuencana',
+      price: 5.40,
+      image: 'assets/images/muñeca.png',
+      userImage: 'assets/images/persson3.png',
+      description:
+          'Una biografía, de Mercedes Altamir. Este libro de 160 páginas narran la vida y obra de la artista Ecuatoriana...',
+      isFav: false),
   Product(
-    name: 'Sombrero Paja Toquilla',
-    price: 44.30,
-    image: 'assets/images/sombrero.png',
-  ),
+      name: 'Sombrero Paja Toquilla',
+      price: 44.30,
+      image: 'assets/images/sombrero.png',
+      userImage: 'assets/images/persson4.png',
+      description:
+          'Una biografía, de Mercedes Altamir. Este libro de 160 páginas narran la vida y obra de la artista Ecuatoriana...',
+      isFav: true),
   Product(
-    name: 'Zhumir Pink',
-    price: 3.60,
-    image: 'assets/images/zhumir.png',
-  ),
+      name: 'Zhumir Pink',
+      price: 3.60,
+      image: 'assets/images/zhumir.png',
+      userImage: 'assets/images/persson1.png',
+      description:
+          'Una biografía, de Mercedes Altamir. Este libro de 160 páginas narran la vida y obra de la artista Ecuatoriana...',
+      isFav: true),
   Product(
-    name: 'Norteño',
-    price: 6.70,
-    image: 'assets/images/norteño.png',
-  ),
+      name: 'Norteño',
+      price: 6.70,
+      image: 'assets/images/norteño.png',
+      userImage: 'assets/images/persson2.png',
+      description:
+          'Una biografía, de Mercedes Altamir. Este libro de 160 páginas narran la vida y obra de la artista Ecuatoriana...',
+      isFav: false),
 ];

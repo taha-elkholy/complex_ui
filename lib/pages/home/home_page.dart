@@ -1,24 +1,11 @@
 import 'package:complex_ui/core/style/colors.dart';
-import 'package:complex_ui/pages/home/widgets/headers_item.dart';
+import 'package:complex_ui/core/widgets/home_banner.dart';
 import 'package:complex_ui/pages/home/widgets/product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  List<Header> headers = [
-    const Header(title: 'Todos', isSelected: true),
-    const Header(title: 'Snacks'),
-    const Header(title: 'Moda'),
-    const Header(title: 'Licores'),
-    const Header(title: 'Souvenirs'),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +50,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-
             Expanded(
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
@@ -71,33 +57,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.asset(
-                          'assets/images/banner_utpl.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    SizedBox(
-                      height: 35,
-                      child: ListView.separated(
-                        physics: const BouncingScrollPhysics(),
-                        scrollDirection: Axis.horizontal,
-                        itemCount: headers.length,
-                        separatorBuilder: (_, __) => const SizedBox(
-                          width: 10,
-                        ),
-                        itemBuilder: (context, index) => HeadersItem(
-                          header: headers[index],
-                        ),
-                      ),
-                    ),
+                    const HomeBanner(),
                     const SizedBox(
                       height: 20,
                     ),
@@ -107,10 +67,7 @@ class _HomePageState extends State<HomePage> {
                       itemCount: homePageProducts.length,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 16,
-                              mainAxisExtent: 325,
-                              mainAxisSpacing: 16),
+                              crossAxisCount: 2, mainAxisExtent: 325, ),
                       itemBuilder: (context, index) => ProductItem(
                         product: homePageProducts[index],
                       ),
