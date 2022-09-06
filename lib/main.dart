@@ -70,7 +70,8 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
               fontSize: 36,
               fontWeight: FontWeight.normal,
-            ),titleSmall: TextStyle(
+            ),
+            titleSmall: TextStyle(
               color: AppColors.warmBlack,
               fontSize: 32,
               fontWeight: FontWeight.bold,
@@ -84,18 +85,25 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
               fontSize: 15,
               fontWeight: FontWeight.normal,
+            ),bodySmall: TextStyle(
+              color: Colors.black,
+              fontSize: 12,
+              fontWeight: FontWeight.normal,
             ),
           ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ElevatedButton.styleFrom(
             primary: AppColors.orange.withOpacity(.9),
             textStyle: const TextStyle(
-                fontSize: 18,
-                color: AppColors.white,
-                fontWeight: FontWeight.bold,),
-          )
-        )
-      ),
+              fontSize: 18,
+              color: AppColors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          )),
+          navigationBarTheme: const NavigationBarThemeData(
+            height: 60,
+            backgroundColor: AppColors.yellow,
+          )),
       initialRoute: AppRoutes.landingPageRoute,
       onGenerateRoute: onGenerateRoute,
     );

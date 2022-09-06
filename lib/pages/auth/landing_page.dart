@@ -53,7 +53,7 @@ class _Body extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                     child: VerticalDivider(
                       color: Colors.grey,

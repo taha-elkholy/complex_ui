@@ -100,7 +100,8 @@ class _Body extends StatelessWidget {
             width: size.width * 0.8,
             height: size.height * 0.08,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                  context, AppRoutes.homeLayoutPageRoute, (route) => route.isFirst),
               child: const Text(
                 'Ingresar',
               ),

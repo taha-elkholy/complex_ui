@@ -3,6 +3,8 @@ import 'package:complex_ui/core/widgets/app_text_form_field.dart';
 import 'package:complex_ui/core/widgets/background.dart';
 import 'package:flutter/material.dart';
 
+import '../../core/router/routes.dart';
+
 class RegisterPage extends StatelessWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
@@ -116,7 +118,10 @@ class _Body extends StatelessWidget {
                     height: 60,
                     width: size.width * 0.8,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          AppRoutes.homeLayoutPageRoute,
+                          (route) => route.isFirst),
                       child: const Text('Registrarse'),
                     ),
                   ),
