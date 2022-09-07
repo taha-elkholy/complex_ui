@@ -19,7 +19,9 @@ This Flutter project is only for UI purposes.
   <img src="https://user-images.githubusercontent.com/95647394/188742085-ddb44d35-4b16-4df8-b2eb-401f8ceb9398.png" width="250">
   <img src="https://user-images.githubusercontent.com/95647394/188742118-52e61932-d364-4fd5-8379-54e58058ae21.png" width="250">
 </p>
+
 <p float="left">
   <img src="https://user-images.githubusercontent.com/95647394/188741985-4e314c17-4bee-4b24-a74c-f2a1b766c51c.png" width="250">
   <img src="https://user-images.githubusercontent.com/95647394/188742037-24789408-0737-46e7-809c-a08eb2f0df84.png" width="250">
+  <img src="https://user-images.githubusercontent.com/95647394/188940381-7312e2d8-4826-4273-bd7e-d09472457b8b.png" width="250">
 </p>
