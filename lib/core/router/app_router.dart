@@ -3,6 +3,7 @@ import 'package:complex_ui/pages/auth/landing_page.dart';
 import 'package:complex_ui/pages/auth/login_page.dart';
 import 'package:complex_ui/pages/auth/register_page.dart';
 import 'package:complex_ui/pages/auth/register_with_page.dart';
+import 'package:complex_ui/pages/filter/product_details_page.dart';
 import 'package:complex_ui/pages/home_layout.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,12 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.homeLayoutPageRoute:
       return MaterialPageRoute(
         builder: (_) => const HomeLayout(),
+        settings: settings,
+      );
+
+    case AppRoutes.productDetailsPgeRoute:
+      return MaterialPageRoute(
+        builder: (_) => const ProductDetailsPage(),
         settings: settings,
       );
 
