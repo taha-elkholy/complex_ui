@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+          //useMaterial3: true,
           scaffoldBackgroundColor: AppColors.white,
           appBarTheme: const AppBarTheme(
             elevation: 0,
@@ -85,7 +86,8 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
               fontSize: 15,
               fontWeight: FontWeight.normal,
-            ),bodySmall: TextStyle(
+            ),
+            bodySmall: TextStyle(
               color: Colors.black,
               fontSize: 12,
               fontWeight: FontWeight.normal,
@@ -93,7 +95,7 @@ class MyApp extends StatelessWidget {
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
-            primary: AppColors.orange.withOpacity(.9),
+            backgroundColor: AppColors.orange.withOpacity(.9),
             textStyle: const TextStyle(
               fontSize: 18,
               color: AppColors.white,

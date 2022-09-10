@@ -26,7 +26,7 @@ class Background extends StatelessWidget {
                 const Spacer(),
                 HalfCircle(
                   color: color1,
-                  diameter: size.height *0.57,
+                  diameter: size.width ,
                   isRight: false,
                 ),
               ],
@@ -38,7 +38,7 @@ class Background extends StatelessWidget {
           bottom: size.height * 0.07,
           child: HalfCircle(
             color: color2,
-            diameter: size.height * 0.45,
+            diameter: size.width * 0.9,
             isRight: true,
           ),
         ),

@@ -69,14 +69,17 @@ class _Body extends StatelessWidget {
               ),
             ),
           ),
-          AspectRatio(
-            aspectRatio: 1.6,
-            child: Image.asset(
-              'assets/images/mega_creator_1.png',
+          Transform.translate(
+            offset: const Offset(0, 0),
+            child: AspectRatio(
+              aspectRatio: 1.6,
+              child: Image.asset(
+                'assets/images/mega_creator_1.png',
+              ),
             ),
           ),
           Transform.translate(
-            offset: Offset(0, size.height * -0.05),
+            offset: Offset(0, size.height * -0.035),
             child: AspectRatio(
               aspectRatio: 2,
               child: Image.asset(
@@ -84,6 +87,7 @@ class _Body extends StatelessWidget {
               ),
             ),
           ),
+          const Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -128,7 +132,8 @@ class _Body extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
+          const Spacer(),
         ],
       ),
     );

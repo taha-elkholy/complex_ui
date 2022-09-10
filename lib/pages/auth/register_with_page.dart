@@ -42,11 +42,11 @@ class _Body extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        AspectRatio(
-          aspectRatio: 16 / 9,
-          child: Image.asset(
-            'assets/images/casual-life-3d-boy-and-girl-sitting-in-front-of-laptop 1.png',
-          ),
+        Image.asset(
+          'assets/images/casual-life-3d-boy-and-girl-sitting-in-front-of-laptop 1.png',
+        ),
+        SizedBox(
+          height: size.height * 0.02,
         ),
         AppElevatedButtonWithIcon(
           label: 'Registrarse',
@@ -54,7 +54,7 @@ class _Body extends StatelessWidget {
               Navigator.pushNamed(context, AppRoutes.registerPageRoute),
         ),
         SizedBox(
-          height: size.height * 0.015,
+          height: size.height * 0.02,
         ),
         AppElevatedButtonWithIcon(
           onPressed: () {},
@@ -64,7 +64,7 @@ class _Body extends StatelessWidget {
           primaryColor: AppColors.googleBtn.withOpacity(0.8),
         ),
         SizedBox(
-          height: size.height * 0.015,
+          height: size.height * 0.02,
         ),
         AppElevatedButtonWithIcon(
           onPressed: () {},
@@ -74,7 +74,7 @@ class _Body extends StatelessWidget {
           primaryColor: AppColors.yellow.withOpacity(0.8),
         ),
         SizedBox(
-          height: size.height * 0.015,
+          height: size.height * 0.02,
         ),
         AppElevatedButtonWithIcon(
           onPressed: () {},
@@ -83,7 +83,7 @@ class _Body extends StatelessWidget {
           primaryColor: AppColors.warmBlack.withOpacity(0.8),
         ),
         SizedBox(
-          height: size.height * 0.015,
+          height: size.height * 0.02,
         ),
       ],
       ),

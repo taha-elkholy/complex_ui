@@ -5,6 +5,7 @@ import 'package:complex_ui/pages/auth/register_page.dart';
 import 'package:complex_ui/pages/auth/register_with_page.dart';
 import 'package:complex_ui/pages/filter/product_details_page.dart';
 import 'package:complex_ui/pages/home_layout.dart';
+import 'package:complex_ui/pages/messages/chat_room_page.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic>? onGenerateRoute(RouteSettings settings) {
@@ -33,6 +34,11 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     case AppRoutes.productDetailsPgeRoute:
       return MaterialPageRoute(
         builder: (_) => const ProductDetailsPage(),
+        settings: settings,
+      );
+    case AppRoutes.chatRoomPageRoute:
+      return MaterialPageRoute(
+        builder: (_) => const ChatRoomPage(),
         settings: settings,
       );
 

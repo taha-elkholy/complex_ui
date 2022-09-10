@@ -44,31 +44,37 @@ class _Body extends StatelessWidget {
               style: Theme.of(context).textTheme.titleSmall,
             ),
           ),
-          Stack(
-            alignment: Alignment.bottomCenter,
-            children: [
-              SizedBox(
-                height: size.height * 0.1,
-                width: size.width * 0.8,
-                child: AppTextFormField(
-                  hint: 'Ingrese su correo electrónico',
-                  controller: TextEditingController(),
-                  inputType: TextInputType.emailAddress,
-                ),
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Image.asset(
-                    'assets/images/casual-life-3d-young-woman-and-man-smiling-and-leaning-on-each-other 1.png',
-                    width: size.width * .7,
+          Transform.translate(
+            offset: Offset(
+              0,
+              size.height * 0.02,
+            ),
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                SizedBox(
+                  height: size.height * 0.1,
+                  width: size.width * 0.8,
+                  child: AppTextFormField(
+                    hint: 'Ingrese su correo electrónico',
+                    controller: TextEditingController(),
+                    inputType: TextInputType.emailAddress,
                   ),
-                  SizedBox(
-                    height: size.height * 0.05,
-                  )
-                ],
-              ),
-            ],
+                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset(
+                      'assets/images/casual-life-3d-young-woman-and-man-smiling-and-leaning-on-each-other 1.png',
+                      width: size.width * .7,
+                    ),
+                    SizedBox(
+                      height: size.height * 0.07,
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
           SizedBox(
             height: size.height * 0.1,
@@ -81,7 +87,7 @@ class _Body extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: size.height * 0.005,
+            height: size.height * 0.002,
           ),
           Align(
             alignment: AlignmentDirectional.centerEnd,
@@ -100,8 +106,8 @@ class _Body extends StatelessWidget {
             width: size.width * 0.8,
             height: size.height * 0.08,
             child: ElevatedButton(
-              onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                  context, AppRoutes.homeLayoutPageRoute, (route) => route.isFirst),
+              onPressed: () => Navigator.pushNamedAndRemoveUntil(context,
+                  AppRoutes.homeLayoutPageRoute, (route) => route.isFirst),
               child: const Text(
                 'Ingresar',
               ),
