@@ -13,14 +13,10 @@ class ChatRoomPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: const Color(0xff0FB9B1),
         extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          systemOverlayStyle:
-              SystemUiOverlayStyle(statusBarColor: AppColors.chatAppBarColor),
-          leading: SizedBox.shrink(),
-        ),
+
         body: Stack(
-          children: [
-            const Background(color1: AppColors.yellow, color2: AppColors.pink),
+          children: const [
+            Background(color1: AppColors.yellow, color2: AppColors.pink),
             _Body()
           ],
         ));
