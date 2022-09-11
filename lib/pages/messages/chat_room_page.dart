@@ -11,15 +11,54 @@ class ChatRoomPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xff0FB9B1),
-        extendBodyBehindAppBar: true,
-
-        body: Stack(
-          children: const [
-            Background(color1: AppColors.yellow, color2: AppColors.pink),
-            _Body()
-          ],
-        ));
+      backgroundColor: const Color(0xff0FB9B1),
+      appBar: AppBar(
+        backgroundColor: AppColors.chatAppBarColor,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: AppColors.chatAppBarColor,
+        ),
+        leading: const SizedBox.shrink(),
+        bottom: PreferredSize(
+          preferredSize: const Size(double.infinity, 50),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              children: [
+                InkWell(
+                  onTap: () => Navigator.of(context).pop(),
+                  child: SvgPicture.asset(
+                    'assets/icons/eva_arrow-ios-back-fill.svg',
+                    width: 60,
+                    height: 60,
+                  ),
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Image.asset(
+                  'assets/images/persson2.png',
+                  width: 60,
+                  height: 60,
+                ),
+                const SizedBox(
+                  width: 12,
+                ),
+                Text(
+                  'Fernando Herrera',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      body: Stack(
+        children: const [
+          Background(color1: AppColors.yellow, color2: AppColors.pink),
+          _Body()
+        ],
+      ),
+    );
   }
 }
 
@@ -28,46 +67,8 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-
     return Column(
       children: [
-        SizedBox(
-          height: size.height * 0.18,
-          child: ColoredBox(
-            color: AppColors.chatAppBarColor,
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Row(
-                children: [
-                  InkWell(
-                    onTap: () => Navigator.of(context).pop(),
-                    child: SvgPicture.asset(
-                      'assets/icons/eva_arrow-ios-back-fill.svg',
-                      width: 60,
-                      height: 60,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    'assets/images/persson2.png',
-                    width: 60,
-                    height: 60,
-                  ),
-                  const SizedBox(
-                    width: 12,
-                  ),
-                  Text(
-                    'Fernando Herrera',
-                    style: Theme.of(context).textTheme.bodyLarge,
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
         Expanded(
             child: ListView.separated(
                 padding: const EdgeInsets.all(20),
@@ -124,7 +125,7 @@ class _Body extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               CircleAvatar(
