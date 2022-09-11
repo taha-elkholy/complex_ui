@@ -6,7 +6,7 @@ This Flutter project is only for UI purposes.
 * Figma Link => https://www.figma.com/file/luY8L1w7EJRV1D74A2d8q3/Restructured-Ecommerce-App---eShop-(Community)?node-id=0%3A1
 
 
-# Dimo Video
+# Demo Video
 
 https://user-images.githubusercontent.com/95647394/189546441-72eddd9d-53f1-4518-a72a-14e34cbb6006.mp4
 
