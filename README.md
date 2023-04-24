@@ -1,15 +1,19 @@
 # Complex UI App
 
-This Flutter project is only for UI purposes.
+# Description:
+* Completed a Flutter project designed to showcase complex UI design, with a focus on creating a visually appealing and user-friendly application.
+* Utilized Figma to create a complex and intricate design that showcased advanced UI/UX design principles.
+* Implemented the design in Flutter, ensuring that the application accurately reflected the Figma design.
+* Published the code, screenshots, and demo video to the GitHub repository, allowing for easy access and showcasing the application's features.
 
-* Using Figma designed and working on it
+# Technologies used:
+* Flutter
 * Figma Link => https://www.figma.com/file/luY8L1w7EJRV1D74A2d8q3/Restructured-Ecommerce-App---eShop-(Community)?node-id=0%3A1
 
 
 # Demo Video
 
 https://user-images.githubusercontent.com/95647394/189546441-72eddd9d-53f1-4518-a72a-14e34cbb6006.mp4
-
 
 # Screenshots
 
