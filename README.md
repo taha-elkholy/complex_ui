@@ -39,9 +39,9 @@ https://user-images.githubusercontent.com/95647394/189546441-72eddd9d-53f1-4518-
   <img src="https://user-images.githubusercontent.com/95647394/189545775-6f0ab5a5-7f41-47a3-9277-5a82ee39cf5e.jpg" width="300">
 </p>
 
-| * Favorites   | * User Profile |
-| ------------- | -------------- |
-| <img src="https://user-images.githubusercontent.com/95647394/189545826-93095221-bf17-4666-aeb7-bbb3642851d7.jpg" width="300">  | <img src="https://user-images.githubusercontent.com/95647394/189545828-85b557f5-b1f7-4893-8598-f5069049a0f4.jpg" width="300">  |
+| * Favorites                                                                                                                   | * User Profile                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| <img src="https://user-images.githubusercontent.com/95647394/189545826-93095221-bf17-4666-aeb7-bbb3642851d7.jpg" width="300"> | <img src="https://user-images.githubusercontent.com/95647394/189545828-85b557f5-b1f7-4893-8598-f5069049a0f4.jpg" width="300"> |
 
 # Installation
 To install and run the Complex UI App on your local machine, follow these steps:
